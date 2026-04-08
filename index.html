@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi-modal Breast Tumor Ultrasound Dataset Demo - L2–L5 Cases</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <span class="logo-mark">Breast-UVS</span>
+            <span class="logo-text">L2–L5 Grade Demo (8 Videos)</span>
+        </div>
+        <nav class="nav">
+            <a href="#overview">Overview</a>
+            <a href="#l2-cases">L2</a>
+            <a href="#l3-cases">L3</a>
+            <a href="#l4-cases">L4</a>
+            <a href="#l5-cases">L5</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section id="overview" class="section section-hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h1>Multi-Modal Breast Tumor Ultrasound Video Segmentation Benchmark Dataset Demo (L2–L5)</h1>
+                <p class="hero-subtitle">
+                    For each case video, we present:
+                    <p><strong>(1) Ultrasound Frame:</strong> the current ultrasound frame.</p>
+                    <p><strong>(2) Mask Frame:</strong> the corresponding mask frame.</p>
+                    <p><strong>(3) Overlay Frame:</strong> the per-frame overlay result.</p>
+                    <p><strong>(4) Overlay Video:</strong> the composited overlay video.</p>
+                    <p><strong>(5) Raw Diagnostic Report:</strong> the original diagnostic report for the case.</p>
+                    <p><strong>(6) Cleaned Diagnostic Report:</strong> the structured diagnostic report cleaned by the Lingshu32B model.</p>
+                    All frames can be browsed frame by frame using the slider below.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="l2-cases" class="section section-alt">
+        <div class="container">
+            <h2 class="grade-title grade-l2-title">L2 Grade Cases (2 Videos)</h2>
+            <p class="section-desc">
+            </p>
+
+            <div class="case-grid">
+                
+                <article class="case-card" data-case-id="case1">
+                    <header class="case-header">
+                        <div>
+                            <h3>L2 — Case 1</h3>
+                            <p class="case-meta">
+                                Frames: <code>00000.jpg – 00270.jpg</code>. 
+                                Masks: <code>00000.png – 00270.png</code>.
+                            </p>
+                        </div>
+                        <span class="grade-badge grade-l2">L2</span>
+                    </header>
+
+                    
+                    <div class="case-body first-row">
+                       
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case1-frame-tag-image">Frame: 00000</div>
+                            <h4>Ultrasound Frame</h4>
+                            <div class="image-box">
+                                <img id="case1-image" src="" alt="Ultrasound frame">
+                            </div>
+                        </div>
+
+                        
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case1-frame-tag-mask">Frame: 00000</div>
+                            <h4>Mask Frame</h4>
+                            <div class="image-box">
+                                <img id="case1-mask" src="" alt="Mask frame">
+                            </div>
+                        </div>
+
+                        
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case1-frame-tag-overlay">Frame: 00000</div>
+                            <h4>Overlay Frame</h4>
+                            <div class="image-box">
+                                <img id="case1-overlay-frame" src="" alt="Overlay frame">
+                            </div>
+                        </div>
+
+                       
+                        <div class="case-panel">
+                            <h4>Overlay Video (Composited)</h4>
+                            <div class="image-box">
+                                <video id="case1-overlay-video" controls loop muted autoplay preload="metadata">
+                                    <source src="assets/overlay_web_video/L2/Case1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="case-slider">
+                        <label for="case1-slider">Frame index:</label>
+                        <input id="case1-slider" type="range" min="0" max="59" step="1" value="0">
+                        <span id="case1-frame-label" class="frame-label">00000</span>
+                    </div>
+
+                    
+                    <div class="case-body second-row-text">
+                        
+                        <div class="case-panel">
+                            <h4>Raw Diagnostic Report</h4>
+                            <div class="text-box">
+                                <p><strong>Original report (raw):</strong></p>
+                                <p>
+                                    The bilateral breast structures are clearly delineated with heterogeneous glandular tissue echogenicity. A cystic nodule is observed in the right breast at the 9 o'clock position, measuring approximately 5 × 4 mm. The nodule is parallel to the skin, oval-shaped, with smooth and well-defined margins. It is anechoic internally, with no significant calcifications observed. There is no posterior acoustic alteration. The surrounding glandular architecture shows no distortion, and the adjacent ducts are not dilated. The local skin demonstrates no significant thickening or retraction.
+                                </p>
+                            </div>
+                        </div>
+
+                        
+                        <div class="case-panel">
+                            <h4>Cleaned Diagnostic Report</h4>
+                            <div class="text-box">
+                                <p><strong>Nodule 1 Breast:</strong> Right Breast.</p>
+                                <p><strong>Nodule 1 Location:</strong> 9 o'clock position.</p>
+                                <p><strong>Nodule 1 Size:</strong> 5 × 4 mm.</p>
+                                <p><strong>Nodule 1 Shape:</strong> Oval.</p>
+                                <p><strong>Nodule 1 Echogenicity:</strong> Anechoic internal echotexture.</p>
+                                <p><strong>Does Nodule 1 Have Calcifications:</strong> No.</p>
+                                <p><strong>Description of the Surrounding Tissues of Nodule 1:</strong> No distortion of surrounding glandular architecture, no dilated ducts around the nodule, no significant thickening or retraction of local skin.</p>
+                                <p><strong>BI-RADS Grade:</strong> L2 </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                
+                <article class="case-card" data-case-id="case2">
+                    <header class="case-header">
+                        <div>
+                            <h3>L2 — Case 2</h3>
+                            <p class="case-meta">
+                                Frames: <code>00000.jpg – 00270.jpg</code>. 
+                                Masks: <code>00000.png – 00270.png</code>.
+                            </p>
+                        </div>
+                        <span class="grade-badge grade-l2">L2</span>
+                    </header>
+
+                    
+                    <div class="case-body first-row">
+                        
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case2-frame-tag-image">Frame: 00000</div>
+                            <h4>Ultrasound Frame</h4>
+                            <div class="image-box">
+                                <img id="case2-image" src="" alt="Ultrasound frame">
+                            </div>
+                        </div>
+
+                        
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case2-frame-tag-mask">Frame: 00000</div>
+                            <h4>Mask Frame</h4>
+                            <div class="image-box">
+                                <img id="case2-mask" src="" alt="Mask frame">
+                            </div>
+                        </div>
+
+                        
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case2-frame-tag-overlay">Frame: 00000</div>
+                            <h4>Overlay Frame</h4>
+                            <div class="image-box">
+                                <img id="case2-overlay-frame" src="" alt="Overlay frame">
+                            </div>
+                        </div>
+
+                        
+                        <div class="case-panel">
+                            <h4>Overlay Video (Composited)</h4>
+                            <div class="image-box">
+                                <video id="case2-overlay-video" controls loop muted autoplay preload="metadata">
+                                    <source src="assets/overlay_web_video/L2/Case2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="case-slider">
+                        <label for="case2-slider">Frame index:</label>
+                        <input id="case2-slider" type="range" min="0" max="49" step="1" value="0">
+                        <span id="case2-frame-label" class="frame-label">00000</span>
+                    </div>
+
+                    
+                    <div class="case-body second-row-text">
+                        
+                        <div class="case-panel">
+                            <h4>Raw Diagnostic Report</h4>
+                            <div class="text-box">
+                                <p>
+                                    The bilateral breast structures are clearly delineated with heterogeneous glandular tissue echogenicity. A nodule is observed in the left breast, located approximately at the 3 o'clock position within the areolar region, measuring about 11 × 7 mm. The nodule is parallel to the skin, irregular in shape, with smooth and well-defined margins. It is anechoic internally, with no significant calcifications observed. Posterior acoustic enhancement is noted, with no distortion of the surrounding glandular architecture. The adjacent ducts show no dilation, and there is no significant local skin thickening or retraction.
+                                </p>
+                            </div>
+                        </div>
+
+                        
+                        <div class="case-panel">
+                            <h4>Cleaned Diagnostic Report</h4>
+                            <div class="text-box">
+                                <p><strong>Nodule 1 Breast:</strong> Left Breast.</p>
+                                <p><strong>Nodule 1 Location:</strong> 3 o'clock position within the areolar region.</p>
+                                <p><strong>Nodule 1 Size:</strong> 11 × 7 mm.</p>
+                                <p><strong>Nodule 1 Shape:</strong> Irregular.</p>
+                                <p><strong>Nodule 1 Echogenicity:</strong> Anechoic internal echotexture.</p>
+                                <p><strong>Does Nodule 1 Have Calcifications:</strong> No.</p>
+                                <p><strong>Description of the Surrounding Tissues of Nodule 1:</strong> No distortion of surrounding glandular architecture, no dilated ducts around the nodule, no obvious local skin thickening or retraction.</p>
+                                <p><strong>BI-RADS Grade:</strong> L2 </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="l3-cases" class="section">
+        <div class="container">
+            <h2 class="grade-title grade-l3-title">L3 Grade Cases (2 Videos)</h2>
+            <p class="section-desc">               
+            </p>
+
+            <div class="case-grid">
+                
+                <article class="case-card" data-case-id="case3">
+                    <header class="case-header">
+                        <div>
+                            <h3>L3 — Case 1</h3>
+                            <p class="case-meta">
+                                Frames: <code>00000.jpg – 00270.jpg</code>. 
+                                Masks: <code>00000.png – 00270.png</code>.
+                            </p>
+                        </div>
+                        <span class="grade-badge grade-l3">L3</span>
+                    </header>
+
+                    <div class="case-body first-row">
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case3-frame-tag-image">Frame: 00000</div>
+                            <h4>Ultrasound Frame</h4>
+                            <div class="image-box">
+                                <img id="case3-image" src="" alt="Ultrasound frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case3-frame-tag-mask">Frame: 00000</div>
+                            <h4>Mask Frame</h4>
+                            <div class="image-box">
+                                <img id="case3-mask" src="" alt="Mask frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case3-frame-tag-overlay">Frame: 00000</div>
+                            <h4>Overlay Frame</h4>
+                            <div class="image-box">
+                                <img id="case3-overlay-frame" src="" alt="Overlay frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <h4>Overlay Video (Composited)</h4>
+                            <div class="image-box">
+                                <video id="case3-overlay-video" controls loop muted autoplay preload="metadata">
+                                    <source src="assets/overlay_web_video/L3/Case1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-slider">
+                        <label for="case3-slider">Frame index:</label>
+                        <input id="case3-slider" type="range" min="0" max="39" step="1" value="0">
+                        <span id="case3-frame-label" class="frame-label">00000</span>
+                    </div>
+
+                    <div class="case-body second-row-text">
+                        <div class="case-panel">
+                            <h4>Raw Diagnostic Report</h4>
+                            <div class="text-box">
+                                <p>The bilateral breast structures are clearly delineated with heterogeneous glandular tissue echogenicity. A nodule is observed in the right breast, located in the areolar region at approximately the 2 o'clock position, measuring about 14 × 8 mm. The nodule is parallel to the skin, oval in shape, with smooth and well-defined margins. It appears hypoechoic internally, without obvious calcifications. There is no significant posterior echo alteration, and no distortion of the surrounding glandular architecture is noted. The adjacent ducts are not dilated, and there is no obvious local skin thickening or retraction.</p>
+                            </div>
+                        </div>
+                        <div class="case-panel">
+                            <h4>Cleaned Diagnostic Report</h4>
+                            <div class="text-box">
+                                <p><strong>Nodule 1 Breast:</strong> Right Breast.</p>
+                                <p><strong>Nodule 1 Location:</strong> Areolar region, 2 o'clock position.</p>
+                                <p><strong>Nodule 1 Size:</strong> 14 × 8 mm.</p>
+                                <p><strong>Nodule 1 Shape:</strong> Oval.</p>
+                                <p><strong>Nodule 1 Echogenicity:</strong> Hypoechoic.</p>
+                                <p><strong>Does Nodule 1 Have Calcifications:</strong> No.</p>
+                                <p><strong>Description of the Surrounding Tissues of Nodule 1:</strong> No distortion of the surrounding glandular architecture, no dilated ducts around the nodule, no significant local skin thickening or retraction.</p>
+                                <p><strong>BI-RADS Grade:</strong> L3 </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                
+                <article class="case-card" data-case-id="case4">
+                    <header class="case-header">
+                        <div>
+                            <h3>L3 — Case 2</h3>
+                            <p class="case-meta">
+                                Frames: <code>00000.jpg – 00299.jpg</code>. 
+                                Masks: <code>00000.png – 00299.png</code>.
+                            </p>
+                        </div>
+                        <span class="grade-badge grade-l3">L3</span>
+                    </header>
+
+                    <div class="case-body first-row">
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case4-frame-tag-image">Frame: 00000</div>
+                            <h4>Ultrasound Frame</h4>
+                            <div class="image-box">
+                                <img id="case4-image" src="" alt="Ultrasound frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case4-frame-tag-mask">Frame: 00000</div>
+                            <h4>Mask Frame</h4>
+                            <div class="image-box">
+                                <img id="case4-mask" src="" alt="Mask frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case4-frame-tag-overlay">Frame: 00000</div>
+                            <h4>Overlay Frame</h4>
+                            <div class="image-box">
+                                <img id="case4-overlay-frame" src="" alt="Overlay frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <h4>Overlay Video (Composited)</h4>
+                            <div class="image-box">
+                                <video id="case4-overlay-video" controls loop muted autoplay preload="metadata">
+                                    <source src="assets/overlay_web_video/L3/Case2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-slider">
+                        <label for="case4-slider">Frame index:</label>
+                        <input id="case4-slider" type="range" min="0" max="54" step="1" value="0">
+                        <span id="case4-frame-label" class="frame-label">00000</span>
+                    </div>
+
+                    <div class="case-body second-row-text">
+                        <div class="case-panel">
+                            <h4>Raw Diagnostic Report</h4>
+                            <div class="text-box">
+                                <p>The bilateral breast structures are clearly delineated with heterogeneous glandular tissue echogenicity. Two nodules are visualized in the right breast. Nodule 1 is located at approximately the 1 o'clock position, 15 mm from the nipple, measuring approximately 29 × 17 mm in size, oriented parallel to the skin, oval in shape, with smooth and well-defined margins, hypoechoic internally, no significant calcifications observed, no obvious posterior acoustic changes, no distortion of surrounding glandular structures, no ductal dilatation around the nodule, and no significant local skin thickening or retraction.</p>
+                            </div>
+                        </div>
+                        <div class="case-panel">
+                            <h4>Cleaned Diagnostic Report</h4>
+                            <div class="text-box">
+                                <p><strong>Nodule 1 Breast:</strong> Right Breast.</p>
+                                <p><strong>Nodule 1 Location:</strong> 1 o'clock position, 15 mm from the nipple.</p>
+                                <p><strong>Nodule 1 Size:</strong> 29 × 17 mm.</p>
+                                <p><strong>Nodule 1 Shape:</strong> Oval.</p>
+                                <p><strong>Nodule 1 Echogenicity:</strong> Hypoechoic.</p>
+                                <p><strong>Does Nodule 1 Have Calcifications:</strong> No.</p>
+                                <p><strong>Description of the Surrounding Tissues of Nodule 1:</strong> No distortion of surrounding glandular structures, no ductal dilatation around the nodule, no significant local skin thickening or retraction.</p>
+                                <p><strong>BI-RADS Grade:</strong> L3 </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="l4-cases" class="section section-alt">
+        <div class="container">
+            <h2 class="grade-title grade-l4-title">L4 Grade Cases (2 Videos)</h2>
+            <p class="section-desc">
+            </p>
+
+            <div class="case-grid">
+                
+                <article class="case-card" data-case-id="case5">
+                    <header class="case-header">
+                        <div>
+                            <h3>L4 — Case 1</h3>
+                            <p class="case-meta">
+                                Frames: <code>00000.jpg – 00299.jpg</code>. 
+                                Masks: <code>00000.png – 00299.png</code>.
+                            </p>
+                        </div>
+                        <span class="grade-badge grade-l4">L4</span>
+                    </header>
+
+                    <div class="case-body first-row">
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case5-frame-tag-image">Frame: 00000</div>
+                            <h4>Ultrasound Frame</h4>
+                            <div class="image-box">
+                                <img id="case5-image" src="" alt="Ultrasound frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case5-frame-tag-mask">Frame: 00000</div>
+                            <h4>Mask Frame</h4>
+                            <div class="image-box">
+                                <img id="case5-mask" src="" alt="Mask frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case5-frame-tag-overlay">Frame: 00000</div>
+                            <h4>Overlay Frame</h4>
+                            <div class="image-box">
+                                <img id="case5-overlay-frame" src="" alt="Overlay frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <h4>Overlay Video (Composited)</h4>
+                            <div class="image-box">
+                                <video id="case5-overlay-video" controls loop muted autoplay preload="metadata">
+                                    <source src="assets/overlay_web_video/L4/Case1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-slider">
+                        <label for="case5-slider">Frame index:</label>
+                        <input id="case5-slider" type="range" min="0" max="44" step="1" value="0">
+                        <span id="case5-frame-label" class="frame-label">00000</span>
+                    </div>
+
+                    <div class="case-body second-row-text">
+                        <div class="case-panel">
+                            <h4>Raw Diagnostic Report</h4>
+                            <div class="text-box">
+                                <p>The bilateral breast structures are clearly delineated with heterogeneous glandular tissue echogenicity. A nodule is observed in the left breast, located at approximately the 2-3 o'clock position, 26 mm from the nipple, measuring approximately 22 × 11 mm. The nodule is parallel to the skin, irregular in shape, with microlobulated margins, and demonstrates hypoechoic internal echotexture without obvious calcifications. There is no significant posterior acoustic change, and the surrounding glandular architecture shows no distortion. No ductal dilatation is noted around the nodule, and the local skin shows no obvious thickening or retraction.</p>
+                            </div>
+                        </div>
+                        <div class="case-panel">
+                            <h4>Cleaned Diagnostic Report</h4>
+                            <div class="text-box">
+                                <p><strong>Nodule 1 Breast:</strong> Left Breast.</p>
+                                <p><strong>Nodule 1 Location:</strong> 2-3 o'clock position, 26 mm from the nipple.</p>
+                                <p><strong>Nodule 1 Size:</strong> 22 × 11 mm.</p>
+                                <p><strong>Nodule 1 Shape:</strong> Irregular, microlobulated margins.</p>
+                                <p><strong>Nodule 1 Echogenicity:</strong> Hypoechoic.</p>
+                                <p><strong>Does Nodule 1 Have Calcifications:</strong> No.</p>
+                                <p><strong>Description of the Surrounding Tissues of Nodule 1:</strong> No distortion of surrounding glandular architecture, no ductal dilatation, no skin thickening or retraction.</p>
+                                <p><strong>BI-RADS Grade:</strong> L4 </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                
+                <article class="case-card" data-case-id="case6">
+                    <header class="case-header">
+                        <div>
+                            <h3>L4 — Case 2</h3>
+                            <p class="case-meta">
+                                Frames: <code>00000.jpg – 00300.jpg</code>. 
+                                Masks: <code>00000.png – 00300.png</code>.
+                            </p>
+                        </div>
+                        <span class="grade-badge grade-l4">L4</span>
+                    </header>
+
+                    <div class="case-body first-row">
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case6-frame-tag-image">Frame: 00000</div>
+                            <h4>Ultrasound Frame</h4>
+                            <div class="image-box">
+                                <img id="case6-image" src="" alt="Ultrasound frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case6-frame-tag-mask">Frame: 00000</div>
+                            <h4>Mask Frame</h4>
+                            <div class="image-box">
+                                <img id="case6-mask" src="" alt="Mask frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case6-frame-tag-overlay">Frame: 00000</div>
+                            <h4>Overlay Frame</h4>
+                            <div class="image-box">
+                                <img id="case6-overlay-frame" src="" alt="Overlay frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <h4>Overlay Video (Composited)</h4>
+                            <div class="image-box">
+                                <video id="case6-overlay-video" controls loop muted autoplay preload="metadata">
+                                    <source src="assets/overlay_web_video/L4/Case2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-slider">
+                        <label for="case6-slider">Frame index:</label>
+                        <input id="case6-slider" type="range" min="0" max="59" step="1" value="0">
+                        <span id="case6-frame-label" class="frame-label">00000</span>
+                    </div>
+
+                    <div class="case-body second-row-text">
+                        <div class="case-panel">
+                            <h4>Raw Diagnostic Report</h4>
+                            <div class="text-box">
+                                <p>The bilateral breast structures are clearly delineated with heterogeneous glandular tissue echogenicity. A nodule is observed in the left breast, located at approximately the 2 o'clock position, 37 mm from the nipple, measuring approximately 12 × 3 mm. The nodule is parallel to the skin, oval in shape, with smooth and well-defined margins. It appears hypoechoic internally and contains clumped calcifications. There is no significant posterior acoustic alteration. The surrounding glandular architecture shows no distortion, and no ductal dilatation is noted around the nodule. The local skin demonstrates no obvious thickening or retraction.</p>
+                            </div>
+                        </div>
+                        <div class="case-panel">
+                            <h4>Cleaned Diagnostic Report</h4>
+                            <div class="text-box">
+                                <p><strong>Nodule 1 Breast:</strong> Left Breast.</p>
+                                <p><strong>Nodule 1 Location:</strong> 2 o'clock position, 37 mm from the nipple.</p>
+                                <p><strong>Nodule 1 Size:</strong> 12 × 3 mm.</p>
+                                <p><strong>Nodule 1 Shape:</strong> Oval.</p>
+                                <p><strong>Nodule 1 Echogenicity:</strong> Hypoechoic.</p>
+                                <p><strong>Does Nodule 1 Have Calcifications:</strong> Yes, clumped calcifications.</p>
+                                <p><strong>Description of the Surrounding Tissues of Nodule 1:</strong> No distortion of surrounding glandular architecture, no ductal dilatation, no significant posterior acoustic alteration, no obvious skin thickening or retraction.</p>
+                                <p><strong>BI-RADS Grade:</strong> L4 </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="l5-cases" class="section">
+        <div class="container">
+            <h2 class="grade-title grade-l5-title">L5 Grade Cases (2 Videos)</h2>
+            <p class="section-desc">
+            </p>
+
+            <div class="case-grid">
+               
+                <article class="case-card" data-case-id="case7">
+                    <header class="case-header">
+                        <div>
+                            <h3>L5 — Case 1</h3>
+                            <p class="case-meta">
+                                Frames: <code>00000.jpg – 00269.jpg</code>. 
+                                Masks: <code>00000.png – 00269.png</code>.
+                            </p>
+                        </div>
+                        <span class="grade-badge grade-l5">L5</span>
+                    </header>
+
+                    <div class="case-body first-row">
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case7-frame-tag-image">Frame: 00000</div>
+                            <h4>Ultrasound Frame</h4>
+                            <div class="image-box">
+                                <img id="case7-image" src="" alt="Ultrasound frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case7-frame-tag-mask">Frame: 00000</div>
+                            <h4>Mask Frame</h4>
+                            <div class="image-box">
+                                <img id="case7-mask" src="" alt="Mask frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case7-frame-tag-overlay">Frame: 00000</div>
+                            <h4>Overlay Frame</h4>
+                            <div class="image-box">
+                                <img id="case7-overlay-frame" src="" alt="Overlay frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <h4>Overlay Video (Composited)</h4>
+                            <div class="image-box">
+                                <video id="case7-overlay-video" controls loop muted autoplay preload="metadata">
+                                    <source src="assets/overlay_web_video/L5/Case1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-slider">
+                        <label for="case7-slider">Frame index:</label>
+                        <input id="case7-slider" type="range" min="0" max="49" step="1" value="0">
+                        <span id="case7-frame-label" class="frame-label">00000</span>
+                    </div>
+
+                    <div class="case-body second-row-text">
+                        <div class="case-panel">
+                            <h4>Raw Diagnostic Report</h4>
+                            <div class="text-box">
+                                <p>The breast structures are clearly delineated bilaterally, with heterogeneous echogenicity of the glandular tissue. Multiple nodules are visualized in the left breast, with the largest nodule located at approximately the 2 o'clock position, measuring about 36 × 34 mm. The nodule is oval-shaped and not parallel to the skin, with indistinct margins and hypoechoic internal echotexture. Microcalcifications and coarse calcifications are observed within the nodule. There is no significant posterior acoustic change. Surrounding glandular tissue shows architectural distortion, without ductal dilatation around the nodule. No obvious skin thickening or retraction is noted locally.</p>
+                            </div>
+                        </div>
+                        <div class="case-panel">
+                            <h4>Cleaned Diagnostic Report</h4>
+                            <div class="text-box">
+                                <p><strong>Nodule 1 Breast:</strong> Left Breast.</p>
+                                <p><strong>Nodule 1 Location:</strong> 2 o'clock position.</p>
+                                <p><strong>Nodule 1 Size:</strong> 36 × 34 mm.</p>
+                                <p><strong>Nodule 1 Shape:</strong> Oval.</p>
+                                <p><strong>Nodule 1 Echogenicity:</strong> Hypoechoic.</p>
+                                <p><strong>Does Nodule 1 Have Calcifications:</strong> Yes, microcalcifications and coarse calcifications.</p>
+                                <p><strong>Description of the Surrounding Tissues of Nodule 1:</strong> Architectural distortion of surrounding glandular tissue, no ductal dilatation, no significant posterior acoustic change, no obvious skin thickening or retraction.</p>
+                                <p><strong>BI-RADS Grade:</strong> L5 </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                
+                <article class="case-card" data-case-id="case8">
+                    <header class="case-header">
+                        <div>
+                            <h3>L5 — Case 2</h3>
+                            <p class="case-meta">
+                                Frames: <code>00000.jpg – 00299.jpg</code>. 
+                                Masks: <code>00000.png – 00299.png</code>.
+                            </p>
+                        </div>
+                        <span class="grade-badge grade-l5">L5</span>
+                    </header>
+
+                    <div class="case-body first-row">
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case8-frame-tag-image">Frame: 00000</div>
+                            <h4>Ultrasound Frame</h4>
+                            <div class="image-box">
+                                <img id="case8-image" src="" alt="Ultrasound frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case8-frame-tag-mask">Frame: 00000</div>
+                            <h4>Mask Frame</h4>
+                            <div class="image-box">
+                                <img id="case8-mask" src="" alt="Mask frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <div class="frame-tag" id="case8-frame-tag-overlay">Frame: 00000</div>
+                            <h4>Overlay Frame</h4>
+                            <div class="image-box">
+                                <img id="case8-overlay-frame" src="" alt="Overlay frame">
+                            </div>
+                        </div>
+
+                        <div class="case-panel">
+                            <h4>Overlay Video (Composited)</h4>
+                            <div class="image-box">
+                                <video id="case8-overlay-video" controls loop muted autoplay preload="metadata">
+                                    <source src="assets/overlay_web_video/L5/Case2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-slider">
+                        <label for="case8-slider">Frame index:</label>
+                        <input id="case8-slider" type="range" min="0" max="59" step="1" value="0">
+                        <span id="case8-frame-label" class="frame-label">00000</span>
+                    </div>
+
+                    <div class="case-body second-row-text">
+                        <div class="case-panel">
+                            <h4>Raw Diagnostic Report</h4>
+                            <div class="text-box">
+                                <p>The bilateral breast structures are clearly delineated with heterogeneous glandular tissue echogenicity. A nodule is observed in the right breast, located at approximately the 9 o'clock position, 10 mm from the nipple, measuring approximately 37 × 32 mm in size. The nodule exhibits an irregular shape with angular and spiculated margins, hypoechoic echotexture, and posterior acoustic shadowing.</p>
+                            </div>
+                        </div>
+                        <div class="case-panel">
+                            <h4>Cleaned Diagnostic Report</h4>
+                            <div class="text-box">
+                                <p><strong>Nodule 1 Breast:</strong> Right Breast.</p>
+                                <p><strong>Nodule 1 Location:</strong> 9 o'clock position, 10 mm from the nipple.</p>
+                                <p><strong>Nodule 1 Size:</strong> 37 × 32 mm.</p>
+                                <p><strong>Nodule 1 Shape:</strong> Irregular, with angular and spiculated margins.</p>
+                                <p><strong>Nodule 1 Echogenicity:</strong> Hypoechoic.</p>
+                                <p><strong>Does Nodule 1 Have Calcifications:</strong> No.</p>
+                                <p><strong>Description of the Surrounding Tissues of Nodule 1:</strong> Posterior acoustic shadowing.</p>
+                                <p><strong>BI-RADS Grade:</strong> L5 </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div class="footer-left">
+            <p class="footer-title">Multimodal Breast Tumor Ultrasound Video Segmentation Benchmark Dataset</p>
+            <p class="footer-text">
+                This demo presents frame-level ultrasound images, sparsely annotated masks, per-frame overlay images, and composited overlay videos for BI-RADS L2–L5 grade breast tumor ultrasound videos. For each case video, both the original diagnostic report and a structured report cleaned by the Lingshu32B model are provided. Two representative case videos are included for each grade.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
