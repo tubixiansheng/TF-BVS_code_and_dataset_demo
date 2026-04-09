@@ -32,7 +32,7 @@ Supplementary_Material
 ```
 
 
-###2. File Structure of the Anonymous Repository
+### 2. File Structure of the Anonymous Repository
 ```
 TF-BVS_code_and_dataset_demo-70D7
 │
@@ -55,6 +55,7 @@ TF-BVS_code_and_dataset_demo-70D7
 To access the dataset visualization demo, please visit the anonymous repository link provided above. You can choose to run it directly online or download it for local execution:
 1. Online Preview (Recommended): In the anonymous repository file list, click on the index.html file, and then click the View raw button in the top right corner to run the interactive demo directly online. (Note: If the page data does not load completely or displays incorrectly, please refresh the page and try again.)
 2. Local Execution: Alternatively, you can download the complete repository folder to your local computer and open the index.html file using any web browser that supports HTML. This will similarly load and display the interactive dataset demo.
+💡 Interaction Guide:
    - On the demo page, you can drag the index slider at the bottom to browse the breast ultrasound videos frame by frame while intuitively viewing their corresponding tumor mask annotations.
    - **Recommended Browsers**:
       - Chrome
