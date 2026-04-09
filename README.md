@@ -1,51 +1,78 @@
 # TF-BVS Supplementary Material
 
 ## Introduction
-This project contains supplementary materials for the TF-BVS framework, including an interactive demo for the breast tumor ultrasound video segmentation dataset, core code files, and an appendices PDF. Specifically, it includes:
-- **Dataset Demo**: A static file for interactively viewing examples of ultrasound videos and their mask annotations from the dataset.
-- **TF-BVS Core Code**: Includes the implementation of important modules in the TF-BVS model.
-- **Appendix PDF**: Contains detailed descriptions of the dataset, experimental settings, additional ablation studies, and hyperparameter sensitivity analysis.
+This compressed package serves as the supplementary material for the TF-BVS framework. It primarily contains the core code files for the TF-BVS model, the appendix PDF, and instructions for viewing the interactive demo of the breast tumor ultrasound video segmentation dataset.
+
+Specifically, upon extracting this package, you will find the following files:
+- **`README.md`**: The current instruction document, containing an overview of the attachments and a tutorial on running the dataset visualization page.
+- **`TF-BVS_Code/`** directory: Contains the code implementation of the core modules in the TF-BVS model.
+- **`Supplementary_Material.pdf`**: The appendix document, containing detailed descriptions of the dataset, experimental setups, additional ablation studies, and hyperparameter sensitivity analysis.
+
+**🌐 Anonymous Repository Access:**
+To facilitate interactive review for the reviewers, we have provided a link to an anonymous repository within `Supplementary_Material.pdf`. This repository not only contains all the aforementioned code and appendix contents but also hosts the **online dataset visualization page** and the **dataset sample source files**.
+* **Anonymous Repository Link**: [https://anonymous.4open.science/r/TF-BVS_code_and_dataset_demo-70D7](https://anonymous.4open.science/r/TF-BVS_code_and_dataset_demo-70D7)
 
 ---
 
-## File Structure
+## File Structure Overview
+
+To clearly illustrate the contents in different environments, the file structures for the "Local Extracted Package" and the "Online Anonymous Repository" are listed separately below:
+
+### 1. File Structure of the Local Extracted Package
 ```plaintext
+Supplementary_Material
+│
+├── README.md                    # Supplementary material instructions (this file)
+├── TF-BVS_Code/                 # Core code folder for the TF-BVS model
+│   ├── Backbone/                # Cross-frame Temporal Backbone module code
+│   ├── Branch/                  # Frame-wise Temporal Branch module code
+│   └── LV2TOT/                  # LV2TOT module code
+│
+└── Supplementary_Material.pdf   # Appendix file containing supplementary details
+```
+
+
+###2. File Structure of the Anonymous Repository
+```
 TF-BVS_code_and_dataset_demo-70D7
 │
-├── assets/                      # Static folder for dataset demo
-├── index.html                   # Main page for viewing the dataset
+├── assets/                      # Static resources and source files for the dataset demo
+├── css/                         # Static resources for the dataset demo
+├── js/                          # Static resources for the dataset demo
+├── index.html                   # Main page for interactive dataset visualization
 │
 ├── TF-BVS_Code/                 # Core code folder for the TF-BVS model
-│   ├── Backbone/                # Cross-frame Temporal Backbone module
-│   ├── Branch/                  # Frame-wise Temporal Branch module
-│   └── LV2TOT/                  # LV2TOT module
+│   ├── Backbone/                # Cross-frame Temporal Backbone module code
+│   ├── Branch/                  # Frame-wise Temporal Branch module code
+│   └── LV2TOT/                  # LV2TOT module code
 │
-└── Supplementary_Material.pdf  # Appendix file with supplementary materials
+└── Supplementary_Material.pdf   # Appendix file containing supplementary details
 ```
 
 ---
 
 ## How to Open the Dataset Demo
-1. Online Preview (Recommended): In the anonymous repository, click on the `index.html` file, then click **View raw** in the top right corner of the page to run the interactive demo online. *(Note: If the page data does not load completely, please refresh the page and try again.)
-2. Local Execution: Alternatively, download the complete repository folder to your local machine, and open the `index.html` file using any web browser that supports HTML. This will load and display the interactive dataset demo.
-   - On the demo page, you can drag the index slider to browse the ultrasound video frames one by one while viewing their corresponding mask annotations.
+To access the dataset visualization demo, please visit the anonymous repository link provided above. You can choose to run it directly online or download it for local execution:
+1. Online Preview (Recommended): In the anonymous repository file list, click on the index.html file, and then click the View raw button in the top right corner to run the interactive demo directly online. (Note: If the page data does not load completely or displays incorrectly, please refresh the page and try again.)
+2. Local Execution: Alternatively, you can download the complete repository folder to your local computer and open the index.html file using any web browser that supports HTML. This will similarly load and display the interactive dataset demo.
+   - On the demo page, you can drag the index slider at the bottom to browse the breast ultrasound videos frame by frame while intuitively viewing their corresponding tumor mask annotations.
    - **Recommended Browsers**:
       - Chrome
       - Edge
       - Firefox
-   - **Offline Support**: The demo works offline and does not require an internet connection.
+   - **Offline Support**: If you choose the "Local Execution" method, the demo fully supports offline browsing and does not require an internet connection.
 
 ---
 
-## Appendix Details
+## Appendix Details (Supplementary_Material.pdf)
 - **File Path**: The appendix file is located in the project root directory with the filename `Supplementary_Material.pdf`.
 - **Main Contents**:
-  1. Detailed description of the dataset.
-  2. Experimental setups and additional ablation studies.
-  3. Hyperparameter sensitivity analysis.
+  1. Detailed description of the multi-modal ultrasound dataset.
+  2. Experimental setups for adapting natural-scene baseline models, along with additional ablation study results.
+  3. Sensitivity analysis of core hyperparameters.
 
 ---
 
 ## Notes
-- The dataset demo does not require an internet connection.
-- In the future, we will continue to expand and refine the dataset, with a particular focus on supplementing the scarce high-risk grade cases.
+- Network Connection: Running the dataset demo locally does not require an internet connection; however, previewing the demo directly online via the anonymous repository requires a stable network connection.
+- Future Work: We will continue to expand and refine this multi-modal dataset, with a particular focus on supplementing the clinically scarce high-risk grade (High BI-RADS grade) cases to further enhance the model's generalization capability and clinical value.
