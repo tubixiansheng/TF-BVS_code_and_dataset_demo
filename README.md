@@ -8,8 +8,7 @@ This repository contains the interactive visualization demo for the TF-BVS breas
 - `assets/` - video frames, masks, and other demo assets
 - `css/` - page styles
 - `js/` - demo logic
-- `Supplementary_Material.pdf` - supplementary paper material
-- `MM_WQW.pdf` - full paper, available for direct online reading
+- `TF-BVS.pdf` - full paper, available for direct online reading
 
 The model implementation is intentionally not included in this public demo repository.
 
@@ -23,7 +22,7 @@ The demo is self-contained and supports offline browsing after the repository ha
 
 ## Read the paper
 
-[Open the full paper online](MM_WQW.pdf)
+[Open the full paper online](TF-BVS.pdf)
 
 ## About TF-BVS
 
