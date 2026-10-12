@@ -9,6 +9,7 @@ This repository contains the interactive visualization demo for the TF-BVS breas
 - `css/` - page styles
 - `js/` - demo logic
 - `Supplementary_Material.pdf` - supplementary paper material
+- `MM_WQW.pdf` - full paper, available for direct online reading
 
 The model implementation is intentionally not included in this public demo repository.
 
@@ -19,6 +20,10 @@ The model implementation is intentionally not included in this public demo repos
 3. Use the index slider to browse ultrasound video frames and their tumor-mask annotations.
 
 The demo is self-contained and supports offline browsing after the repository has been downloaded.
+
+## Read the paper
+
+[Open the full paper online](MM_WQW.pdf)
 
 ## About TF-BVS
 
